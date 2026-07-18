@@ -11,8 +11,8 @@ week_ago = today - timedelta(days=7)
 start_date = week_ago.strftime("%Y-%m-%d")
 end_date = today.strftime("%Y-%m-%d")
 
-# Get Paris weather for past week
-url = f"https://api.open-meteo.com/v1/forecast?latitude=48.85&longitude=2.35&start_date={start_date}&end_date={end_date}&daily=temperature_2m_max,temperature_2m_min"
+# Get Pilsen weather for past week
+url = f"https://api.open-meteo.com/v1/forecast?latitude=49.7384&longitude=13.3736&start_date={start_date}&end_date={end_date}&daily=temperature_2m_max,temperature_2m_min"
 
 response = requests.get(url)
 response.raise_for_status()
@@ -47,7 +47,7 @@ plt.plot(df['date'], df['min_temp'], marker='o', label='Min Temp')
 # Add labels and title
 plt.xlabel('Date')
 plt.ylabel('Temperature (°C)')
-plt.title('Paris Weather - Past 7 Days')
+plt.title('Pilsen Weather - Past 7 Days')
 plt.legend()
 
 # Rotate x-axis labels for readability
@@ -65,5 +65,5 @@ if not os.path.exists('data'):
     os.makedirs('data')
 
 # Save to CSV
-df.to_csv('data/paris_weather.csv', index=False)
-print("Data saved to data/paris_weather.csv")
+df.to_csv('data/pilsen_weather.csv', index=False)
+print("Data saved to data/pilsen_weather.csv")
