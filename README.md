@@ -1,1 +1,1 @@
-﻿
+python-for-ai – osobní repozitář s Python skripty pro práci s daty a AI. Obsahuje skript get_data.py, který stahuje předpověď počasí pro Plzeň a vykresluje graf (weather_chart.png), a sales-analysis/hello.py pro analýzu prodejních dat s mezisoučty za položky a celkovým součtem. Závislosti jsou v requirements.txt.﻿
